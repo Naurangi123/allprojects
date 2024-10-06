@@ -3,7 +3,7 @@ import openai
 
 from openai import *
 
-openai.api_key = "sk-6mAFM4nFbOfihnsx-AgLQ3UeELxVYLvzwTE3kHQGfBT3BlbkFJ-ajrtuS1ylq3iBB2XJJ0J1dUjoNBZoicAsrTvB7fEA"  # Set your API key here
+# openai.api_key = "sk-6mAFM4nFbOfihnsx-AgLQ3UeELxVYLvzwTE3kHQGfBT3BlbkFJ-ajrtuS1ylq3iBB2XJJ0J1dUjoNBZoicAsrTvB7fEA"  # Set your API key here
 messages = [{'role': 'system', 'content': "For assistant"}]
 while True:
     query = input("User: ")

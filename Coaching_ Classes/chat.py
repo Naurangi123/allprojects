@@ -1,7 +1,7 @@
 import openai
 
 # Set your API key here
-openai.api_key = "sk-6mAFM4nFbOfihnsx-AgLQ3UeELxVYLvzwTE3kHQGfBT3BlbkFJ-ajrtuS1ylq3iBB2XJJ0J1dUjoNBZoicAsrTvB7fEA" 
+# openai.api_key = "sk-6mAFM4nFbOfihnsx-AgLQ3UeELxVYLvzwTE3kHQGfBT3BlbkFJ-ajrtuS1ylq3iBB2XJJ0J1dUjoNBZoicAsrTvB7fEA" 
 
 messages = [{'role': 'system', 'content': "For assistant"}]
 
