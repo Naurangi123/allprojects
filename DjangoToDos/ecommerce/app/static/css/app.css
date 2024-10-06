@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ffe4c4;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffe4c4;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    background-color: #ffe4c4;
+}
+ul li{
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ffe4c4;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin-left: 10rem;
+}
+
+.login_form1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+.login_form1 form{
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}

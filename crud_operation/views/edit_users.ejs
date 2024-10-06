@@ -1,0 +1,37 @@
+<%- include('layouts/header') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-4">
+            <div class="card card-shadow shadow-lg">
+                <div class="card-header bg-success">
+                    <h2 class="card-title text-center mb-4 text-light">Edit User <%= user.name %></h2>
+                </div>
+                <div class="card-body p-4">
+                    <form action="/update/<%= user._id %>" method="post" enctype="multipart/form-data" id="add-form">
+                        <div class="mb-3">
+                            <input type="text" name="name" value="<%= user.name %>" class="form-control form-control-lg" id="name" placeholder="Name">
+                        </div>
+                        <div class="mb-3">
+                            
+                            <input type="email" name="email" value="<%= user.email %>" class="form-control form-control-lg" id="email" placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                            
+                            <input type="tel" name="phone" value="<%= user.phone %>" class="form-control form-control-lg" id="phone" placeholder="Phone No">
+                        </div>
+                        <div class="mb-3">
+                            <input type="file" name="image" class="form-control form-control-lg" id="image">
+                            <img src="/<%= user.image %>" width="100" class="img-thumbnail mt-1">
+                            <input type="hidden" name="old_image" value="<%= user.image %>">
+                        </div>
+                        <div class="d-grid mb-3">
+                            <button type="submit" name="submit" value="Update Users" class="btn btn-success btn-lg">Update User</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('layouts/footer') %>

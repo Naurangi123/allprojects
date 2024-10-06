@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "version": "20.10.0",
+  "description": "i dont know",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node index.js"
+  },
+  "author": "naurangi",
+  "license": "MIT",
+  "dependencies": {
+    "area-of-square": "^1.0.1"
+  }
+}

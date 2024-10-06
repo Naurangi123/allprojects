@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login_form">
+        <form action="#">
+            <h3>Log in with</h3>
+            <div class="login_option">
+                <div class="option">
+                    <a href="#">
+                        <img src="{% static '/images/img.jpg' %}" alt="Google"/>
+                        <span>Google</span>
+                    </a>
+                </div>
+                <div class="option">
+                    <a href="#">
+                        <img src="{% static '/images/img.jpg' %}" alt="Apple"/>
+                        <span>Apple</span>
+                    </a>
+                </div>
+            </div>
+            <p class="separator">
+                <span>or</span>
+            </p>
+            <div class="input_box">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter Email address" required>
+            </div>
+            <div class="input_box">
+                <div class="password_title">
+                    <label for="password">Password</label>
+                    <a href="{% url 'forgetpassword' %}" class="forgot_password">Forgot Password?</a>
+                </div>
+                <input type="password" id="password" placeholder="Enter Password" required>
+            </div>
+            <button type="submit">Log In</button>
+            <p class="sign_up">Don't have an account? <a href="{% url 'register' %}">Sign Up</a></p>
+        </form>
+    </div>
+</body>
+</html>

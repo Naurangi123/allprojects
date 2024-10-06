@@ -1,0 +1,12 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Welcome to ShopEasy</h1>
+        <p>Your favorite place to shop for amazing products</p>
+        <a href="{% url 'products' %}" class="btn-primary">Shop Now</a>
+    </div>
+</section>
+{% endblock %}

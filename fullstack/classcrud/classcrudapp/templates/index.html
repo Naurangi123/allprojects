@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <ol>
+            {% for ob in object_list %}
+            <hr>
+            <li>{{ ob.title }}</li>
+            <li>{{ ob.name }}</li>
+            <li>{{ ob.price }}</li>
+            <hr>
+            {% endfor %}
+        </ol>
+    </form>
+    <a href="{% url 'add' %}">Add</a><br>
+    <a href="{% url 'detail' detail.pk %}">Detail</a><br>
+    <a href="{% url 'update' update.pk %}">Update</a><br>
+    <a href="{% url 'delete' delete.pk %}">Delete</a>
+</body>
+</html>

@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+nav{
+    background-color: indigo !important;
+    width: 100%;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    color: brown;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+    flex: 3;
+}
+li{
+    padding: 10px;
+    margin :5px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+li a{
+    text-decoration: none;
+    color:white !important;
+}
+.navbar form{
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 2px;
+    margin-top: 10px;
+}
+form input{
+    width:20em;
+    height: 2em;
+}
+form button{
+    width:7em;
+    height: 2em;
+}
+
+.carousel-inner .carousel-item img{
+    width: 50%;
+    height: 20%;
+}

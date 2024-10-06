@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <title>Django Web PAge</title>
+</head>
+<body>
+    {% block content %}
+    <h1><center>Django Web Application</center></h1>
+
+    <div class="container">
+        {% for name in names %}
+        <ul>
+            <li> Welcome {{ name }}</li>
+        </ul>
+        {% endfor %}
+    </div>
+    <a href="{% url 'login' %}">Click Me</a>
+    {% endblock %}
+</body>
+</html>

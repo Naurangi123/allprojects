@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Data</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+   
+    <div class="container mt-5">
+        {% if error %}
+        <div class="mt-5" style="color: red;">
+            <li class="mt-4"><strong>Error:</strong> {{ error }}</li>
+        </div>
+        {% endif %}
+        <h1 class="text-center">Extracted Resume Data</h1>
+
+        <h2 class="mt-4">Name: {{ data.name }}</h2>
+        <h3>Contact Information</h3>
+        <p><strong>Phone:</strong> {{ data.phone }}</p>
+        <p><strong>Email:</strong> {{ data.email }}</p>
+        <p><strong>LinkedIn:</strong> <a href="{{ data.link }}">{{ data.link }}</a></p>
+
+        <h3>Education</h3>
+        <ul class="list-group">
+            {% for edu in data.education %}
+                <li class="list-group-item">{{ edu }}</li>
+                {% empty %}
+            <li class="list-group-item">No education found.</li>
+            {% endfor %}
+        </ul>
+
+        <h3 class="mt-4">Professional Experience</h3>
+        <ul class="list-group">
+            {% for experience in data.professional_experience %}
+                <li class="list-group-item">{{ experience }}</li>
+            {% empty %}
+                <li class="list-group-item">No professional experience found.</li>
+            {% endfor %}
+        </ul>
+
+        <h3 class="mt-4">Technologies</h3>
+        <ul class="list-group">
+            {% for tech in data.technologies %}
+                <li class="list-group-item">{{ tech }}</li>
+            {% empty %}
+                <li class="list-group-item">No technologies found.</li>
+            {% endfor %}
+        </ul>
+
+        <h3 class="mt-4">Projects</h3>
+        <ul class="list-group">
+            {% if data.projects %}
+                <li class="list-group-item">
+                    <strong>Title:</strong> {{ projects }}<br>
+                    <strong>Duration:</strong> {{ project.duration }}<br>
+                    <strong>Date:</strong> {{ project.month_year }}<br>
+                    <strong>Technologies:</strong> {{ project.tech_stack }}
+                </li>
+            {% else %}
+                <li class="list-group-item">No projects found.</li>
+            {% endif %}
+        </ul>
+
+        <a href="/" class="btn btn-primary text-center mt-4">Upload another resume</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+</body>
+</html>
