@@ -1,0 +1,3 @@
+ midddleare is used for authentication and authorization a services
+ session 
+outside file access permission request and response.

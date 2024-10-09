@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <h1><center>All Products</center></h1>
+    <h1><center>{{ count }}</center></h1>
+    <div class="product">
+        <h2>Product 1</h2>
+        {% if products %}
+        {% for product in products %}
+        <hr>
+        <p>{{ product.pname }}</p>
+        <p>{{ product.price }}</p>
+            {% if product.file %}
+                <img src="{{ product.file.url }}" alt="Product Image" width="250" height="150">
+                <p class="card-text"> Description :Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, atque.</p>
+            {% else %}
+                <p class="text-muted">No image available.</p>
+            {% endif %}
+        {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
